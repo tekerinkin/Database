@@ -1,0 +1,12 @@
+# ninja log v5
+6	95	1660767703520529173	build.ninja	f9c69418a0e68834
+1	833	1660767580100557622	CMakeFiles/Database.dir/main.cpp.o	d91cf33843f680ca
+407	443	1660653347964551499	Database	5435c7935c2f3e9a
+5	568	1660767706555801796	CMakeFiles/Database.dir/src/util/String_util.cpp.o	4a651cc9bbe2a033
+4	694	1660767706682452911	CMakeFiles/Database.dir/src/StringTokenizer/Token.cpp.o	9ddb9864b23c960a
+4	703	1660767706693016243	CMakeFiles/Database.dir/src/StringTokenizer/Tokenizer.cpp.o	78c326ee5f60a3d0
+3	728	1660767706718670208	CMakeFiles/Database.dir/src/StringTokenizer/StateTable.cpp.o	c99789170c8d0c34
+4	911	1660767706903388493	CMakeFiles/Database.dir/src/util/IO/Binary_util.cpp.o	853ee3606d38a9a1
+5	937	1660767706928693745	CMakeFiles/Database.dir/src/util/IO/Record.cpp.o	39b0853dbae64705
+2	1040	1660942684039192904	CMakeFiles/Database.dir/main.cpp.o	d91cf33843f680ca
+2	781	1660943273817669866	CMakeFiles/Database.dir/main.cpp.o	d91cf33843f680ca
