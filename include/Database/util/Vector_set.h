@@ -27,9 +27,9 @@ namespace vset {
 		std::vector<T> result;
 		db::BPTree<T> tree;
 		for(T i : v1)
-			tree.insert(i);
+			tree.Insert(i);
 		for(T i : v2)
-			tree.insert(i);
+			tree.Insert(i);
 
 		for(auto it = tree.begin(); it != tree.end(); ++it)
 			result.push_back(*it);

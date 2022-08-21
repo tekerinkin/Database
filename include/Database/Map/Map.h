@@ -140,13 +140,13 @@ namespace Map {
 	template<typename K, typename V>
 	void Map<K, V>::Erase(const K& key)
 	{
-		tree_.Remove(key);
+		tree_.Remove(Pair<K, V>(key, V()));
 	}
 
 	template<typename K, typename V>
 	bool Map<K, V>::Contains(const K& key)
 	{
-		auto search = tree_.Search(key);
+		auto search = tree_.Search(Pair<K, V>(key, V()));
 		return search != nullptr;
 	}
 

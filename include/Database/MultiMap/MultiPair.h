@@ -15,7 +15,7 @@ namespace multi_map {
 
 		Pair(const K& key, const V& value) : key_(key)
 		{
-			values_.push_back(key);
+			values_.push_back(value);
 		}
 
 		Pair(const K& key, const std::vector<V>& values) : key_(key)
@@ -24,7 +24,7 @@ namespace multi_map {
 		}
 
 		void operator+=(const Pair& other) {
-			for(size_t i = 0; i < other.values_; ++i) {
+			for(size_t i = 0; i < other.values_.size(); ++i) {
 				values_.push_back(other.values_.at(i));
 			}
 		}

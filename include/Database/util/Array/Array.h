@@ -139,7 +139,7 @@ namespace util {
 			throw std::out_of_range("PopBack: Out of range");
 
 		auto ret = data_[--size_];
-		data_[size_+1] = 0;
+		//data_[size_+1] = 0;
 		return ret;
 	}
 
@@ -152,7 +152,7 @@ namespace util {
 
 		for(size_t i = index; i < size_ - 1; ++i)
 			data_[i] = data_[i+1];
-		data_[size_-1] = 0;
+		//data_[size_-1] = 0;
 		--size_;
 
 		return ret;

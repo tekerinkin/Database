@@ -142,13 +142,13 @@ namespace multi_map {
 	template<typename K, typename V>
 	void MultiMap<K, V>::Erase(const K& key)
 	{
-		tree_.Remove(key);
+		tree_.Remove(Pair<K, V>(key, V()));
 	}
 
 	template<typename K, typename V>
 	bool MultiMap<K, V>::Contains(const K& key)
 	{
-		auto search = tree_.Search(key);
+		auto search = tree_.Search(Pair<K, V>(key, V()));
 		return search != nullptr;
 	}
 
@@ -167,12 +167,12 @@ namespace multi_map {
 	template<typename K, typename V>
 	Iterator<K, V> MultiMap<K, V>::LowerBound(const K& entry) const
 	{
-		return Iterator<K, V>(tree_.LowerBound(entry));
+		return Iterator<K, V>(tree_.LowerBound(Pair<K, V>(entry, V())));
 	}
 
 	template<typename K, typename V>
 	Iterator<K, V> MultiMap<K, V>::UpperBound(const K& entry) const
 	{
-		return Iterator<K, V>(tree_.UpperBound(entry));
+		return Iterator<K, V>(tree_.UpperBound(Pair<K, V>(entry, V())));
 	}
 }

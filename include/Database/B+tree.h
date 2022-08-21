@@ -381,7 +381,7 @@ namespace db {
 			subset_size_++;
 		}
 
-		util::AppendItem(subset_[child], data_[child]);
+		util::AppendItem(subset_[child]->data_, data_[child]);
 
 		if(subset_[child+1] == nullptr)
 			throw std::runtime_error("BPTree::RotateLeft: Can't AppendItem");
@@ -654,7 +654,7 @@ namespace db {
 			throw std::runtime_error("BPTree::TransferLeft: Call a non leaf");
 
 		util::AppendItem(subset_[subset]->data_,
-			util::DeleteItem(subset_[subset+1], 0));
+			util::DeleteItem(subset_[subset+1]->data_, 0));
 
 		data_[subset] = subset_[subset + 1]->data_[0];
 	}
@@ -669,7 +669,7 @@ namespace db {
 			throw std::runtime_error("BPTree::TransferRight: Call a non leaf");
 
 		util::InsertItem(subset_[subset+1]->data_, 0,
-			subset_.PopBack());
+			subset_[subset+1]->data_.PopBack());
 
 		data_[subset] = subset_[subset+1]->data_[0];
 	}

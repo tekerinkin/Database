@@ -15,7 +15,7 @@ namespace Map {
 	template<typename K, typename V>
 	void Pair<K, V>::operator+=(const Pair& other)
 	{
-		value_ += other.value_;
+		value_ += static_cast<V>(other.value_);
 	}
 
 	template<typename K, typename V>
